@@ -9,8 +9,6 @@ const BlogList = () => {
     // Contentful API Keys
     const client = createClient({space: `${process.env.REACT_APP_BLOG_SPACE}`, accessToken: `${process.env.REACT_APP_BLOG_TOKEN}`})
 
-    //Splicing Date data
-
     // Fetching the data
     useEffect(() => {
         const getAllEntries = async () => {
