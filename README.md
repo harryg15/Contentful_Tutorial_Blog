@@ -1,4 +1,6 @@
-Process for adding Contentful (Notes):
+Live Site: https://contentful-blog-hg.netlify.app/
+
+Process for adding Contentful (Personal Notes):
 
 1. Get Blog layout & styling with boilerplate information first
 2. npm install contentful
