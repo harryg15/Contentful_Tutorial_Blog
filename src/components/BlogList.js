@@ -14,14 +14,13 @@ const BlogList = () => {
         const getAllEntries = async () => {
             try {
                 const entry = await client.getEntries()
-                console.log(entry)
                 setBlogPosts(entry)
+
             } catch (error) {
                 console.error(error.message);
             }
         }
         getAllEntries()
-
     }, []);  
 
   return (

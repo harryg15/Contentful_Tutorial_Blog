@@ -9,20 +9,20 @@ const BlogDetails = () => {
     // Contentful API Keys
     const client = createClient({space: `${process.env.REACT_APP_BLOG_SPACE}`, accessToken: `${process.env.REACT_APP_BLOG_TOKEN}`})
 
+    // using URL id to match with what Entry to show (useEffect Below)
     const { id } = useParams()
-    console.log(id)
 
+    // Fetching the data
     useEffect(() => {
         const getEntryById = async () => {
             try {
                 const entryId = await client.getEntry(id)
                 setSingleBlogPost(entryId)
-                console.log(entryId)
+
             } catch (error) {
                 console.error(error.message)
             }
         }
-
         getEntryById()
     }, [])
   return (
